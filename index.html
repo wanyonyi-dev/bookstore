@@ -1,0 +1,77 @@
+<!-- File: index.html -->
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Bookstore Display</title>
+    <style>
+        table {
+            border-collapse: collapse;
+            width: 100%;
+            margin-top: 20px;
+        }
+        th, td {
+            border: 1px solid #ddd;
+            padding: 8px;
+            text-align: left;
+        }
+        th {
+            background-color: #4CAF50;
+            color: white;
+        }
+        tr:nth-child(even) {
+            background-color: #f2f2f2;
+        }
+    </style>
+</head>
+<body>
+    <h1>Bookstore Catalog</h1>
+    <div id="bookstore-data"></div>
+
+    <script>
+        // Function to load and parse XML
+        function loadXMLDoc() {
+            const xmlhttp = new XMLHttpRequest();
+            xmlhttp.onreadystatechange = function() {
+                if (this.readyState == 4 && this.status == 200) {
+                    displayBooks(this);
+                }
+            };
+            xmlhttp.open("GET", "bookstore.xml", true);
+            xmlhttp.send();
+        }
+
+        // Function to display books in a table
+        function displayBooks(xml) {
+            const xmlDoc = xml.responseXML;
+            const books = xmlDoc.getElementsByTagName("book");
+            
+            let table = '<table>' +
+                '<tr>' +
+                '<th>Title</th>' +
+                '<th>Author</th>' +
+                '<th>Price</th>' +
+                '<th>ISBN</th>' +
+                '<th>Category</th>' +
+                '<th>Publication Year</th>' +
+                '</tr>';
+            
+            for (let i = 0; i < books.length; i++) {
+                table += '<tr>' +
+                    '<td>' + books[i].getElementsByTagName("title")[0].childNodes[0].nodeValue + '</td>' +
+                    '<td>' + books[i].getElementsByTagName("author")[0].childNodes[0].nodeValue + '</td>' +
+                    '<td>$' + books[i].getElementsByTagName("price")[0].childNodes[0].nodeValue + '</td>' +
+                    '<td>' + books[i].getElementsByTagName("isbn")[0].childNodes[0].nodeValue + '</td>' +
+                    '<td>' + books[i].getAttribute("category") + '</td>' +
+                    '<td>' + books[i].getElementsByTagName("publication_year")[0].childNodes[0].nodeValue + '</td>' +
+                    '</tr>';
+            }
+            table += '</table>';
+            
+            document.getElementById("bookstore-data").innerHTML = table;
+        }
+
+        // Load the XML when the page loads
+        window.onload = loadXMLDoc;
+    </script>
+</body>
+</html>

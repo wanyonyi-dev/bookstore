@@ -1,0 +1,9 @@
+<!ELEMENT bookstore (book+)>
+<!ELEMENT book (title, author, price, isbn, category, publication_year)>
+<!ELEMENT title (#PCDATA)>
+<!ELEMENT author (#PCDATA)>
+<!ELEMENT price (#PCDATA)>
+<!ELEMENT isbn (#PCDATA)>
+<!ELEMENT category (#PCDATA)>
+<!ELEMENT publication_year (#PCDATA)>
+<!ATTLIST book category (children|fiction|non-fiction) #REQUIRED>
