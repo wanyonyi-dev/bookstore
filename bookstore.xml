@@ -1,5 +1,6 @@
-<!DOCTYPE bookstore SYSTEM "bookstore.dtd">
+<?xml version="1.0" encoding="UTF-8"?>
 <bookstore>
+    <!-- Children's Books -->
     <book category="children">
         <title>Harry Potter and the Philosopher's Stone</title>
         <author>J.K. Rowling</author>
@@ -8,6 +9,24 @@
         <category>children</category>
         <publication_year>1997</publication_year>
     </book>
+    <book category="children">
+        <title>Charlotte's Web</title>
+        <author>E.B. White</author>
+        <price>12.99</price>
+        <isbn>978-0064400558</isbn>
+        <category>children</category>
+        <publication_year>1952</publication_year>
+    </book>
+    <book category="children">
+        <title>The Lion, the Witch and the Wardrobe</title>
+        <author>C.S. Lewis</author>
+        <price>14.99</price>
+        <isbn>978-0064404990</isbn>
+        <category>children</category>
+        <publication_year>1950</publication_year>
+    </book>
+
+    <!-- Fiction Books -->
     <book category="fiction">
         <title>The Great Gatsby</title>
         <author>F. Scott Fitzgerald</author>
@@ -15,5 +34,101 @@
         <isbn>978-0743273565</isbn>
         <category>fiction</category>
         <publication_year>1925</publication_year>
+    </book>
+    <book category="fiction">
+        <title>1984</title>
+        <author>George Orwell</author>
+        <price>16.99</price>
+        <isbn>978-0451524935</isbn>
+        <category>fiction</category>
+        <publication_year>1949</publication_year>
+    </book>
+    <book category="fiction">
+        <title>Pride and Prejudice</title>
+        <author>Jane Austen</author>
+        <price>13.99</price>
+        <isbn>978-0141439518</isbn>
+        <category>fiction</category>
+        <publication_year>1813</publication_year>
+    </book>
+
+    <!-- Non-Fiction Books -->
+    <book category="non-fiction">
+        <title>A Brief History of Time</title>
+        <author>Stephen Hawking</author>
+        <price>22.99</price>
+        <isbn>978-0553380163</isbn>
+        <category>non-fiction</category>
+        <publication_year>1988</publication_year>
+    </book>
+    <book category="non-fiction">
+        <title>Sapiens: A Brief History of Humankind</title>
+        <author>Yuval Noah Harari</author>
+        <price>24.99</price>
+        <isbn>978-0062316097</isbn>
+        <category>non-fiction</category>
+        <publication_year>2014</publication_year>
+    </book>
+    <book category="non-fiction">
+        <title>The Power of Habit</title>
+        <author>Charles Duhigg</author>
+        <price>20.99</price>
+        <isbn>978-0812981605</isbn>
+        <category>non-fiction</category>
+        <publication_year>2012</publication_year>
+    </book>
+
+    <!-- Technical Books -->
+    <book category="non-fiction">
+        <title>Clean Code</title>
+        <author>Robert C. Martin</author>
+        <price>34.99</price>
+        <isbn>978-0132350884</isbn>
+        <category>non-fiction</category>
+        <publication_year>2008</publication_year>
+    </book>
+    <book category="non-fiction">
+        <title>The Pragmatic Programmer</title>
+        <author>Andrew Hunt, David Thomas</author>
+        <price>39.99</price>
+        <isbn>978-0201616224</isbn>
+        <category>non-fiction</category>
+        <publication_year>1999</publication_year>
+    </book>
+
+    <!-- Contemporary Fiction -->
+    <book category="fiction">
+        <title>The Midnight Library</title>
+        <author>Matt Haig</author>
+        <price>18.99</price>
+        <isbn>978-0525559474</isbn>
+        <category>fiction</category>
+        <publication_year>2020</publication_year>
+    </book>
+    <book category="fiction">
+        <title>Where the Crawdads Sing</title>
+        <author>Delia Owens</author>
+        <price>17.99</price>
+        <isbn>978-0735219090</isbn>
+        <category>fiction</category>
+        <publication_year>2018</publication_year>
+    </book>
+
+    <!-- Modern Children's Books -->
+    <book category="children">
+        <title>The Gruffalo</title>
+        <author>Julia Donaldson</author>
+        <price>11.99</price>
+        <isbn>978-0142403877</isbn>
+        <category>children</category>
+        <publication_year>1999</publication_year>
+    </book>
+    <book category="children">
+        <title>Wonder</title>
+        <author>R.J. Palacio</author>
+        <price>15.99</price>
+        <isbn>978-0375869020</isbn>
+        <category>children</category>
+        <publication_year>2012</publication_year>
     </book>
 </bookstore>
